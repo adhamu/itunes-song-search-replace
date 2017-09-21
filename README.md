@@ -25,7 +25,7 @@ By default, the first time you load your library, it will be cached using Pickle
 
 ## Options
 | Option        | Description                   | Required?     |
-| ------------- | ----------------------------- | ------------- |
+| :---:         | :---:                         | :---:         |
 | `-i`          | iTunes Library File           | Y             |
 | `-s`          | Search term                   | Y             |
 | `-r`          | Replace search term with      | Y             |
