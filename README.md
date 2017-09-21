@@ -2,7 +2,7 @@
 Get rid of annoying strings in MP3s song names. Inspired by [Doug's Script for Search & Replace](https://dougscripts.com/itunes/scripts/ss.php?sp=searchreplacetagtext).
 
 ## Requirements
-- iTunes [need your library file](https://support.apple.com/en-us/HT201610)
+- iTunes ([need your library file](https://support.apple.com/en-us/HT201610))
 - Python3
 
 ## Example Usage
