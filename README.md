@@ -18,7 +18,7 @@ You will then be presented with a confirmation for each result:
 Replace "feat." with "Featuring " [y/n] ?
 ```
 
-*Note:* If you don't want to be promoted for each result, add the `--noconfirm` flag.
+*Note:* If you don't want to be prompted for each result, add the `--noconfirm` flag.
 
 ## What Else
 By default, the first time you load your library, it will be cached using Pickle. Useful if you have a large library. To disable this, add the `--nocache` flag when you execute the script.
