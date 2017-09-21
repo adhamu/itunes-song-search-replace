@@ -14,8 +14,8 @@ python3 index.py -i 'iTunes Music Library.xml' -s 'feat.' -r 'Featuring '
 You will then be presented with a confirmation for each result:
 
 ```bash
-/Users/Amit/iTunes/Nas/Hustlers feat.The Game.mp3
-Replace " feat." with "Featuring " [y/n] ?
+/Users/Amit/iTunes/Nas/Hip Hop Is Dead/Hustlers feat.The Game.mp3
+Replace "feat." with "Featuring " [y/n] ?
 ```
 
 ## What Else
