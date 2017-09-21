@@ -7,6 +7,17 @@ from mutagen.easyid3 import EasyID3
 from libpytunes import Library
 import argparse
 
+
+def update(song):
+    """Update song name via it's ID3 tag."""
+    try:
+        audio = EasyID3('/' + song.location)
+        audio['title'] = song.name.replace(offence, replace_offence_with)
+        audio.save()
+        print('Saved as ' + audio['title'][0])
+    except Exception:
+        print('File not found. Try clearing your cache')
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description='Searches your iTunes library and replaces an offending string'
@@ -37,6 +48,11 @@ if __name__ == '__main__':
         action='store_true',
         help='Disable caching with pickle'
     )
+    parser.add_argument(
+        '--noconfirm',
+        action='store_true',
+        help='Don\'t confirm changes, just apply to all results'
+    )
 
     args = parser.parse_args()
 
@@ -62,18 +78,14 @@ if __name__ == '__main__':
             found = True
             print('/' + song.location)
 
-            confirmation = input(confirm_message)
-
-            if confirmation == 'y':
-                try:
-                    audio = EasyID3('/' + song.location)
-                    audio['title'] = song.name.replace(offence, replace_offence_with)
-                    audio.save()
-                    print('Saved as ' + audio['title'][0])
-                except Exception as e:
-                    print('File not found. Try clearing your cache')
+            if args.noconfirm:
+                update(song)
             else:
-                print('Song name not changed')
+                confirmation = input(confirm_message)
+                if confirmation == 'y':
+                    update(song)
+                else:
+                    print('Song name not changed')
 
     if found is False:
         print('No results found')
