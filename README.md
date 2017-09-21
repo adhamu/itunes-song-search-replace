@@ -22,3 +22,12 @@ Replace "feat." with "Featuring " [y/n] ?
 
 ## What Else
 By default, the first time you load your library, it will be cached using Pickle. Useful if you have a large library. To disable this, add the `--nocache` flag when you execute the script.
+
+## Options
+| Option        | Description                   | Required?     |
+| ------------- | ----------------------------- | ------------- |
+| `i`           | iTunes Library File           | Y             |
+| `s`           | Search term                   | Y             |
+| `r`           | Replace search term with      | Y             |
+| `--noncache`  | Don't cache library results   | N             |
+| `--noconfirm` | Don't prompt for changes      | N             |
