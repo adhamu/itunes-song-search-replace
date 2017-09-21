@@ -7,7 +7,7 @@ Get rid of annoying strings in MP3s song names. Inspired by [Doug's Script for S
 
 ## Example Usage
 
-```python
+```bash
 python3 index.py -i 'iTunes Music Library.xml' -s 'feat.' -r 'Featuring '
 ```
 
